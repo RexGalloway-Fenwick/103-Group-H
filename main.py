@@ -10,6 +10,7 @@ def main():
     left_side_speed = 0
     right_side_speed = 0
     while True:
+        print("Hello world")
         for dist in rover.laser_distances:
             print(dist)
             print(rover.laser_distances[dist])
