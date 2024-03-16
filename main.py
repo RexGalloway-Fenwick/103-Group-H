@@ -25,6 +25,7 @@ def main():
                 left_side_speed = 1
                 right_side_speed = -1
                 rover.send_command(left_side_speed, right_side_speed)
+                print("Too close to left side")
 
 
         if rover.laser_distances[24] < 0.5 and rover.laser_distances[25] < 0.5 and rover.laser_distances[26] < 0.5 and rover.laser_distances[15] < 2:
@@ -32,6 +33,7 @@ def main():
                 left_side_speed = -1
                 right_side_speed = 1
                 rover.send_command(left_side_speed, right_side_speed)
+                print("Too close to left side")
 
 
     """
