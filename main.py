@@ -7,12 +7,14 @@ def main():
     angle_reader = AngleReader()
 
 
-    left_side_speed = 0
-    right_side_speed = 0
+    left_side_speed = 1
+    right_side_speed = -1
 
-    print("Hello world!")
-    for dist in rover.laser_distances:
-        print(dist)
+    while True:
+        print
+
+
+
 
 
 

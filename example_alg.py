@@ -11,7 +11,7 @@ def main():
     i = 0
 
     left_side_speed = 1
-    right_side_speed = 1
+    right_side_speed = -1
     isTooClose = False
     try:
         while not isTooClose or True:
