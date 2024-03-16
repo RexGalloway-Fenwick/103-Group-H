@@ -2,6 +2,7 @@ from qset_lib import Rover, AngleReader
 from time import sleep
 import signal
 import numpy
+import math
 
 def main():
     rover = Rover() # this line starts the connection to the rover and gives access to the rover data
@@ -13,7 +14,7 @@ def main():
 
     desiredX = 10
     desiredY = 10
-    desiredAngle = numpy.arctan(desiredX/desiredY)*-1
+    desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
     print(desiredAngle)
     while True:
         i = 0
