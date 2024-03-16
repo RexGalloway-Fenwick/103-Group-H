@@ -13,7 +13,7 @@ def main():
 
     desiredX = 10
     desiredY = 10
-    desiredAngle = numpy.arctan(desiredX, desiredY)*-1
+    desiredAngle = numpy.arctan(desiredX/desiredY)*-1
     while angle_reader.read_angle != desiredAngle:
         left_side_speed = 1
         right_side_speed = -1
