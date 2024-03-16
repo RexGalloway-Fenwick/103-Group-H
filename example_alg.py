@@ -14,7 +14,9 @@ def main():
     desiredX = 10
     desiredY = 10
     desiredAngle = numpy.arctan(desiredX/desiredY)*-1
-    while angle_reader.read_angle - desiredAngle < 10:
+    print(desiredAngle)
+    while angle_reader.read_angle - desiredAngle > 10:
+        print(angle_reader.read_angle)
         left_side_speed = 1
         right_side_speed = -1
         rover.send_command(left_side_speed, right_side_speed)
