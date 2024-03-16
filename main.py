@@ -13,7 +13,7 @@ def main():
     print("Hello world!")
     for dist in rover.laser_distances:
         print(dist)
-        print(rover.laser_distances[dist])
+
 
 
 
