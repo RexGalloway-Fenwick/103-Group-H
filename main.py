@@ -8,7 +8,7 @@ def main():
 
 
     left_side_speed = 1
-    right_side_speed = -1
+    right_side_speed =
 
     while True:
         print
