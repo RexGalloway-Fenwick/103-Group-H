@@ -24,8 +24,8 @@ def main():
         rover.send_command(left_side_speed, right_side_speed)
 
     
-    left_side_speed = 1
-    right_side_speed = 1
+    left_side_speed = 2
+    right_side_speed = 2
     rover.send_command(left_side_speed, right_side_speed)
 
     while True:
@@ -36,7 +36,7 @@ def main():
                 rover.send_command(left_side_speed, right_side_speed)
                 break
 
-    while rover.laser_distances[28] < 3:
+    while rover.laser_distances[28] < 3 or rover.laser_distances[29] > 0.76:
         left_side_speed = -1
         right_side_speed = 1
         rover.send_command(left_side_speed, right_side_speed)
