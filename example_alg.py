@@ -46,11 +46,23 @@ def main():
 
     rotatedEnough = False
     while not rotatedEnough:
-        if all(dist > 5 for dist in rover.laser_distances):
+        if all(dist > 5 for dist in rover.laser_distances[1:29]):
             left_side_speed = 0
             right_side_speed = 0
             rover.send_command(left_side_speed, right_side_speed)
             rotatedEnough = True
+
+
+
+    tooClose = False
+    while not tooClose:
+        if any(dist < 5 for dist in rover.laser_distances):
+            rotatedEnough = False
+            while not rotatedEnough:
+                if all(dist > 5 for dist in rover.laser_distances):
+                    left_side_speed = -1
+                    right_side_speed = 1
+                    rover.send_command(left_side_speed, right_side_speed)
 
 
 
