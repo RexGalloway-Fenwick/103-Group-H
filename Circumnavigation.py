@@ -23,8 +23,10 @@ def main():
                     for x in range(0,28):
                         print(x)
                         if rover.laser_distances[x] <= 2:
+                            print("test")
                             break
                         if x >= 25:
+                            print("test2")
                             right_side_speed = 0
                             left_side_speed = 0
 
@@ -34,7 +36,7 @@ def main():
     except KeyboardInterrupt:
         pass
 
-    rover.send_command(left_side_speed, right_side_speed)
+    rover.send_command(0, 0)
 
 
 if __name__ == "__main__":
