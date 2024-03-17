@@ -13,8 +13,9 @@ def main():
     i = 0
 
     desiredX = 10
-    desiredY = 10
-    desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
+    desiredY = -10
+    desiredM = desiredY/desiredX
+    desiredAngle = numpy.arctan(desiredX/desiredY)*180/math.pi
     print(desiredAngle)
 
     while rover.heading - desiredAngle > 0.5 or rover.heading - desiredAngle < -0.5:
@@ -51,6 +52,20 @@ def main():
             right_side_speed = 0
             rover.send_command(left_side_speed, right_side_speed)
             rotatedEnough = True
+
+    left_side_speed = 3
+    right_side_speed = 2
+    rover.send_command(left_side_speed, right_side_speed)
+
+    goodSlope = False
+    while not goodSlope:
+        if desiredM - rover.y/rover.x < 0.5:
+            left_side_speed = 0
+            right_side_speed = 0
+            rover.send_command(left_side_speed, right_side_speed)
+            goodSlope = True
+
+
 
 
 
