@@ -5,10 +5,6 @@ import signal
 right_side_speed = 0
 left_side_speed = 0
 
-def circumnavigate():
-    right_side_speed = 1
-    left_side_speed = -1
-
 def main():
     rover = Rover() # this line starts the connection to the rover and gives access to the rover data
     angle_reader = AngleReader()
