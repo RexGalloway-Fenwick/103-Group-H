@@ -2,6 +2,9 @@ from qset_lib import Rover, AngleReader
 from time import sleep
 import signal
 
+left_side_speed = 0
+right_side_speed = 0
+
 def Circumnavigate():
     left_side_speed = -1
     right_side_speed = 1
@@ -28,6 +31,7 @@ def main():
                 # print(dist)
                 if dist < 0.5:
                     print("TOO CLOSE")
+                    Circumnavigate()
             # the below line sends a command to the rover (simulation) 
             rover.send_command(left_side_speed, right_side_speed)
             i = i + 1
