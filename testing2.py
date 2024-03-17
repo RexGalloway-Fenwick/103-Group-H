@@ -28,6 +28,9 @@ def main():
         left_side_speed = 1
         right_side_speed = 1
         rover.send_command(left_side_speed, right_side_speed)
+    left_side_speed = 0
+    right_side_speed = 0
+    rover.send_command(left_side_speed, right_side_speed)
     while True:
         for dist in rover.laser_distances:
             if dist < 1:
