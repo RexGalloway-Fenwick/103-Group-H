@@ -13,7 +13,7 @@ def main():
     i = 0
 
     desiredX = 10
-    desiredY = 10
+    desiredY = -10
     desiredM = desiredY/desiredX
     desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
     print(desiredAngle)
@@ -31,7 +31,6 @@ def main():
 
     isTooClose = False
     while not isTooClose:
-        print("X: " + str(rover.x) + " Y: " + str(rover.y))
         for dist in rover.laser_distances:
             if dist < 0.75:
                 left_side_speed = 0
