@@ -51,6 +51,7 @@ def main():
             rover.send_command(left_side_speed, right_side_speed)
 
 
+    print("hi")
     if rover.laser_distances[29] < 1:
         left_side_speed = 0
         right_side_speed = 0
