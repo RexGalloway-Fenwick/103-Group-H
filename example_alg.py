@@ -15,7 +15,7 @@ def main():
     desiredX = 10
     desiredY = -10
     desiredM = desiredY/desiredX
-    desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
+    desiredAngle = numpy.arctan(desiredX/desiredY)*180/math.pi
     print(desiredAngle)
 
     while rover.heading - desiredAngle > 0.5 or rover.heading - desiredAngle < -0.5:
