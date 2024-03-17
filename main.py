@@ -7,11 +7,7 @@ def main():
     angle_reader = AngleReader()
 
 
-    left_side_speed = 1
-    right_side_speed =
-
-    while True:
-        print
+    print("Hi WIll!")
 
 
 
