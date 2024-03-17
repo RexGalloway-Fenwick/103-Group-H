@@ -6,6 +6,13 @@ def main():
     rover = Rover() # this line starts the connection to the rover and gives access to the rover data
     angle_reader = AngleReader()
 
+    while True:
+        for dist in rover.laser_distances:
+            if dist < 1:
+                left_side_speed = 0
+                right_side_speed = 0
+                rover.send_command(left_side_speed, right_side_speed)
+                break
 
     print("Hi WIll!")
 
