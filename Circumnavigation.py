@@ -22,10 +22,11 @@ def main():
                     left_side_speed = -1
                     break
             print(rover.laser_distances)
+            print(rover.laser_distances[0][1])
             print("\n")
             print(len(rover.laser_distances))
             print("\n")
-            print(range(rover.laser_distances))
+            print()
 
 
             # the below line sends a command to the rover (simulation) 
