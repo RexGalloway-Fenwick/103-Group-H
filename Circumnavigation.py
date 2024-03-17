@@ -11,7 +11,6 @@ def main():
 
     right_side_speed = 1
     left_side_speed = 1
-    distance = [1,2,3,4,5,6]
 
     try:
         while True:
@@ -28,7 +27,7 @@ def main():
             print("\n")
             print(len(rover.laser_distances))
             print("\n")
-            print(distance[3])
+            print(rover.laser_distances) #TODO WHAT THE FUCK
 
 
             # the below line sends a command to the rover (simulation) 
