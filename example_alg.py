@@ -16,11 +16,8 @@ def main():
     desiredY = 10
     desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
     print(desiredAngle)
-    while True:
-        i = 0
-        i += 1
 
-    while rover.heading - desiredAngle > 10 or rover.heading - desiredAngle < -10:
+    while rover.heading - desiredAngle > 0.5 or rover.heading - desiredAngle < -0.5:
         print(angle_reader.read_angle - desiredAngle)
         left_side_speed = 1
         right_side_speed = -1
@@ -30,8 +27,20 @@ def main():
     left_side_speed = 1
     right_side_speed = 1
     rover.send_command(left_side_speed, right_side_speed)
-    
 
+    while True:
+        for dist in rover.laser_distances:
+            if dist < 1:
+                left_side_speed = 0
+                right_side_speed = 0
+                break
+
+
+
+    print("nothing")
+
+
+"""
     isTooClose = False
     try:
         while not isTooClose or True:
@@ -59,3 +68,4 @@ def main():
 if __name__ == "__main__":
     main()
 
+"""
