@@ -9,7 +9,7 @@ def main():
     # Main program loop
     while True :
         for dist in rover.laser_distances:
-            print(rover.laser__distances[dist])
+            print(rover.laser_distances[dist])
 
 if __name__ == "__main__":
     main()
