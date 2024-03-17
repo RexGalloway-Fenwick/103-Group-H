@@ -27,7 +27,6 @@ def main():
 
         # the below line sends a command to the rover (simulation) 
         rover.send_command(left_side_speed, right_side_speed)
-        i = i + 1
         sleep(0.01)
 
 if __name__ == "__main__":
