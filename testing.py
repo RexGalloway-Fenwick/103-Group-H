@@ -31,7 +31,8 @@ def main():
                 # print(dist)
                 if dist < 0.5:
                     print("TOO CLOSE")
-                    Circumnavigate()
+                    left_side_speed = -1
+                    right_side_speed = 1
             # the below line sends a command to the rover (simulation) 
             rover.send_command(left_side_speed, right_side_speed)
             i = i + 1
