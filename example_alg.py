@@ -16,9 +16,6 @@ def main():
     desiredY = 10
     desiredAngle = numpy.arctan(desiredX/desiredY)*-1*180/math.pi
     print(desiredAngle)
-    while True:
-        i = 0
-        i += 1
 
     while rover.heading - desiredAngle > 10 or rover.heading - desiredAngle < -10:
         print(angle_reader.read_angle - desiredAngle)
