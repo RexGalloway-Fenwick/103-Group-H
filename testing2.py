@@ -12,8 +12,8 @@ def main():
     signal.signal(signal.SIGINT, signal.default_int_handler)
     i = 0
 
-    desiredX = 10
-    desiredY = 10
+    desiredX = 1
+    desiredY = 1
     desiredAngle = numpy.arctan(desiredX / desiredY) * -1 * 180 / math.pi
     print(desiredAngle)
 
