@@ -35,9 +35,12 @@ def main():
                 right_side_speed = 0
                 break
 
-    print("hello")
+
+
     
 
+
+"""
     isTooClose = False
     try:
         while not isTooClose or True:
@@ -65,3 +68,4 @@ def main():
 if __name__ == "__main__":
     main()
 
+"""
