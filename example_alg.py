@@ -36,10 +36,12 @@ def main():
                 rover.send_command(left_side_speed, right_side_speed)
                 break
 
-    while rover.laser_distances[28] < 3 or rover.laser_distances[29] > 0.76:
-        left_side_speed = -1
-        right_side_speed = 1
-        rover.send_command(left_side_speed, right_side_speed)
+    left_side_speed = -1
+    right_side_speed = 1
+    rover.send_command(left_side_speed, right_side_speed)
+
+    if rover.laser_distances[29] < 0.76:
+
 
     isTooClose = False
     try:
