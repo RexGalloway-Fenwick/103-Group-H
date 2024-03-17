@@ -43,7 +43,18 @@ def main():
     right_side_speed = 1
     rover.send_command(left_side_speed, right_side_speed)
 
-    if rover.laser_distances[29] < 0.79:
+    while True:
+        for dist in rover.laser_distances:
+            print(dist)
+
+
+
+    if rover.laser_distances[29] < 1:
+        left_side_speed = 0
+        right_side_speed = 0
+        rover.send_command(left_side_speed, right_side_speed)
+    print("hi")
+    if rover.laser_distances[29] < 1:
         left_side_speed = 0
         right_side_speed = 0
         rover.send_command(left_side_speed, right_side_speed)
