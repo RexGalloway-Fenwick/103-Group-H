@@ -22,9 +22,13 @@ def main():
             # print(dist)
             if dist < 0.5:
                 #circumnavigate()
+                print("TOO CLOSE")
                 right_side_speed = 1
                 left_side_speed = -1
-                print("TOO CLOSE")
+                if all(rover.laser_distances[1:29] > 5):
+                    right_side_speed = 0
+                    left_side_speed = 0
+
         # the below line sends a command to the rover (simulation) 
         rover.send_command(left_side_speed, right_side_speed)
         i = i + 1
