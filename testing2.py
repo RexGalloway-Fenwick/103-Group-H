@@ -19,18 +19,21 @@ def main():
 
     while rover.heading - desiredAngle > 0.5 or rover.heading - desiredAngle < -0.5:
         print(angle_reader.read_angle - desiredAngle)
-        print(rover.x)
-        print(rover.y)
         left_side_speed = 1
         right_side_speed = -1
         rover.send_command(left_side_speed, right_side_speed)
-        if rover.x == desiredX and rover.y == desiredY:
-            left_side_speed = 0
-            right_side_speed = 0
+    
 
     left_side_speed = 1
     right_side_speed = 1
     rover.send_command(left_side_speed, right_side_speed)
+    if rover.x > desiredX and rover.y > desiredY:
+            print(rover.x)
+            print(rover.y)
+            left_side_speed = 0
+            right_side_speed = 0
+            rover.send_command(left_side_speed, right_side_speed)
+
    
     while True:
         for dist in rover.laser_distances:
