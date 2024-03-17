@@ -20,15 +20,8 @@ def main():
                     print("TOO CLOSE")
                     right_side_speed = 1
                     left_side_speed = -1
-                    for x in range(0,28):
-                        print(x)
-                        if rover.laser_distances[x] <= 2:
-                            print("test")
-                            break
-                        if x >= 25:
-                            print("test2")
-                            right_side_speed = 0
-                            left_side_speed = 0
+                    break
+            print(rover.laser_distances[28])
 
             # the below line sends a command to the rover (simulation) 
             rover.send_command(left_side_speed, right_side_speed)
