@@ -35,6 +35,7 @@ def main():
                 right_side_speed = 0
                 break
 
+    print("hello")
     
 
     isTooClose = False
