@@ -11,7 +11,14 @@ def main():
 
     right_side_speed = 1
     left_side_speed = 1
+    distance = []
+
     try:
+        i = 0
+        for dist in rover.laser_distances:
+            distance[i] = dist
+            i = i + 1
+
         while True:
             # the below lines iterate through all the laser scan lines and prints if the distance is less than 0.5 meters
             for dist in rover.laser_distances:
@@ -22,11 +29,11 @@ def main():
                     left_side_speed = -1
                     break
             print(rover.laser_distances)
-            print(rover.laser_distances[0][1])
+            print(rover.laser_distances)
             print("\n")
             print(len(rover.laser_distances))
             print("\n")
-            print()
+            print(distance[15])
 
 
             # the below line sends a command to the rover (simulation) 
