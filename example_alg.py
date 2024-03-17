@@ -53,9 +53,12 @@ def main():
             rover.send_command(left_side_speed, right_side_speed)
             rotatedEnough = True
 
+
     left_side_speed = 3
     right_side_speed = 2
     rover.send_command(left_side_speed, right_side_speed)
+
+    sleep(1000)
 
     goodSlope = False
     while not goodSlope:
