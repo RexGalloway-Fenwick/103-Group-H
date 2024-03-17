@@ -31,6 +31,7 @@ def main():
 
     isTooClose = False
     while not isTooClose:
+        print("X: " + str(rover.x) + " Y: " + str(rover.y))
         for dist in rover.laser_distances:
             if dist < 0.75:
                 left_side_speed = 0
@@ -53,8 +54,8 @@ def main():
             rover.send_command(left_side_speed, right_side_speed)
             rotatedEnough = True
 
-    left_side_speed = 2
-    right_side_speed = 1
+    left_side_speed = 3
+    right_side_speed = 2
     rover.send_command(left_side_speed, right_side_speed)
 
     goodSlope = False
