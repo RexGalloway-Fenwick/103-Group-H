@@ -21,7 +21,9 @@ def main():
                     right_side_speed = 1
                     left_side_speed = -1
                     for x in range(0,28):
-                        if rover.laser_distances[x] == 2:
+                        if rover.laser_distances[x] <= 2:
+                            break
+                        if x == 28:
                             right_side_speed = 0
                             left_side_speed = 0
 
