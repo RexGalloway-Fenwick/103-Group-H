@@ -58,7 +58,7 @@ def main():
     right_side_speed = 2
     rover.send_command(left_side_speed, right_side_speed)
 
-    sleep(1000)
+    sleep(2)
 
     goodSlope = False
     while not goodSlope:
