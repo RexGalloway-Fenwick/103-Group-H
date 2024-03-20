@@ -10,7 +10,6 @@ def perpCheck():
     if len(rover.laser_distances) > 0: 
         #Stop if the last few lasers are the only ones that register the obstacle (check the last few for consistency)
         for i in range(28, 1 , -1): #Lasers 1-28 are the ones that work
-            print(i)
             if rover.laser_distances[i] < 1:
                 break
             if i == 3: 
@@ -23,7 +22,6 @@ def distCheck(distance):
             print("TOO CLOSE")
             return 1
         
-            
 def circumnavigate():
     #start circumnavigating by getting parallel to the obstacle
     while True:        
